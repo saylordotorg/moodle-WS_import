@@ -194,7 +194,7 @@ function csv_to_array($filename='', $delimiter=',')
 	$data = array();
 	if (($handle = fopen($filename, 'r')) !== FALSE)
 	{
-		while (($row = fgetcsv($handle, 1000, $delimiter, '"')) !== FALSE)
+		while (($row = fgetcsv($handle, 2000, $delimiter, '"')) !== FALSE)
 		{
 			if(!$header)
 				$header = $row;
